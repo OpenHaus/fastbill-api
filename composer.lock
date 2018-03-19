@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "86c773bc6f4bde509b88a88480f1626f",
+    "content-hash": "450cbd1620d2943a23e4eec8d6f95ddc",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -45,24 +45,27 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2013-11-05 12:28:46"
+            "time": "2013-11-05T12:28:46+00:00"
         },
         {
             "name": "doctrine/collections",
-            "version": "dev-master",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "bcb53776a096a0c64579cc8d8ec0db62f1109fbc"
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/bcb53776a096a0c64579cc8d8ec0db62f1109fbc",
-                "reference": "bcb53776a096a0c64579cc8d8ec0db62f1109fbc",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
@@ -81,17 +84,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan H. Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -100,10 +92,16 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Collections Abstraction library",
@@ -113,7 +111,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2013-08-29 16:56:45"
+            "time": "2015-04-14T22:21:58+00:00"
         },
         {
             "name": "guzzle/guzzle",
@@ -205,7 +203,8 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-10-02 20:47:00"
+            "abandoned": "guzzlehttp/guzzle",
+            "time": "2013-10-02T20:47:00+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -252,28 +251,34 @@
                 "parser",
                 "validator"
             ],
-            "time": "2013-11-04 15:41:11"
+            "time": "2013-11-04T15:41:11+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "dev-master",
-            "target-dir": "Symfony/Component/EventDispatcher",
+            "version": "3.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "07244506ed46ff1914596e13ccc09666ecf7e06d"
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "db08b1b2f9adb5d59a5e838d1577e73c418e05ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/07244506ed46ff1914596e13ccc09666ecf7e06d",
-                "reference": "07244506ed46ff1914596e13ccc09666ecf7e06d",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/db08b1b2f9adb5d59a5e838d1577e73c418e05ed",
+                "reference": "db08b1b2f9adb5d59a5e838d1577e73c418e05ed",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": "~2.0"
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8|~3.0|~4.0",
+                "symfony/dependency-injection": "~3.3|~4.0",
+                "symfony/expression-language": "~2.8|~3.0|~4.0",
+                "symfony/stopwatch": "~2.8|~3.0|~4.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -282,13 +287,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\EventDispatcher\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -301,26 +309,26 @@
                 },
                 {
                     "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2013-11-24 20:17:07"
+            "homepage": "https://symfony.com",
+            "time": "2017-06-12T16:03:21+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "2.3.x-dev",
+            "version": "2.5.x-dev",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Process.git",
-                "reference": "b09d36ac19d221e2e457a1457e6eef9c215845a7"
+                "url": "https://github.com/symfony/process.git",
+                "reference": "00a1308e8b5aec5eba7c8f1708426a78f929be8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/b09d36ac19d221e2e457a1457e6eef9c215845a7",
-                "reference": "b09d36ac19d221e2e457a1457e6eef9c215845a7",
+                "url": "https://api.github.com/repos/symfony/process/zipball/00a1308e8b5aec5eba7c8f1708426a78f929be8c",
+                "reference": "00a1308e8b5aec5eba7c8f1708426a78f929be8c",
                 "shasum": ""
             },
             "require": {
@@ -329,7 +337,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -343,17 +351,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-11-25 14:52:16"
+            "time": "2015-02-08T07:07:45+00:00"
         },
         {
             "name": "webforge/collections",
@@ -361,18 +369,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webforge-labs/webforge-collections.git",
-                "reference": "ffa069d7117fbd1706900ae17682d99fd62c2dc9"
+                "reference": "46f1182105ad42edbc25ba747d16d7dea499015b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webforge-labs/webforge-collections/zipball/ffa069d7117fbd1706900ae17682d99fd62c2dc9",
-                "reference": "ffa069d7117fbd1706900ae17682d99fd62c2dc9",
+                "url": "https://api.github.com/repos/webforge-labs/webforge-collections/zipball/46f1182105ad42edbc25ba747d16d7dea499015b",
+                "reference": "46f1182105ad42edbc25ba747d16d7dea499015b",
                 "shasum": ""
             },
             "require": {
-                "doctrine/collections": "1.2.*"
+                "doctrine/collections": ">=1.2.0,<1.4.0"
             },
             "require-dev": {
+                "liip/rmt": "0.9.*",
                 "satooshi/php-coveralls": "dev-master",
                 "webforge/testplate": ">=1.2"
             },
@@ -401,7 +410,7 @@
                 }
             ],
             "description": "Collection extensions based on Doctrine\\Common\\Collections",
-            "time": "2013-10-29 14:00:10"
+            "time": "2015-10-11T15:59:54+00:00"
         },
         {
             "name": "webforge/common",
@@ -409,12 +418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webforge-labs/webforge-common.git",
-                "reference": "2e1303a109b249e0982246b59e8af6fbf8755c6b"
+                "reference": "b42e5ec4efdb3fa12c6ef66e5569ccd7e5eb6b5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webforge-labs/webforge-common/zipball/2e1303a109b249e0982246b59e8af6fbf8755c6b",
-                "reference": "2e1303a109b249e0982246b59e8af6fbf8755c6b",
+                "url": "https://api.github.com/repos/webforge-labs/webforge-common/zipball/b42e5ec4efdb3fa12c6ef66e5569ccd7e5eb6b5d",
+                "reference": "b42e5ec4efdb3fa12c6ef66e5569ccd7e5eb6b5d",
                 "shasum": ""
             },
             "require": {
@@ -422,20 +431,19 @@
                 "php": ">=5.3.2",
                 "seld/jsonlint": "1.1.*@stable",
                 "webforge/collections": "1.0.*@stable",
-                "webforge/process": "1.1.*@dev"
+                "webforge/process": "1.2.*@dev",
+                "webforge/utils": "1.0.*@dev"
             },
             "require-dev": {
-                "apigen/apigen": "dev-master",
                 "liip/rmt": "0.9.*",
                 "mikey179/vfsstream": "1.2.*@stable",
                 "mockery/mockery": "@stable",
-                "satooshi/php-coveralls": "dev-master",
-                "webforge/testplate": ">=1.3"
+                "satooshi/php-coveralls": "dev-master"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -461,7 +469,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-11-21 09:29:53"
+            "time": "2015-07-21T06:22:10+00:00"
         },
         {
             "name": "webforge/process",
@@ -469,29 +477,29 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webforge-labs/webforge-process.git",
-                "reference": "e7c28dafcd2974370bf289cfe756cd9299c55b08"
+                "reference": "f65ffee6fbfaad413439af76082ca6fda0038be9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webforge-labs/webforge-process/zipball/e7c28dafcd2974370bf289cfe756cd9299c55b08",
-                "reference": "e7c28dafcd2974370bf289cfe756cd9299c55b08",
+                "url": "https://api.github.com/repos/webforge-labs/webforge-process/zipball/f65ffee6fbfaad413439af76082ca6fda0038be9",
+                "reference": "f65ffee6fbfaad413439af76082ca6fda0038be9",
                 "shasum": ""
             },
             "require": {
-                "symfony/process": "2.3.*",
-                "webforge/common": "1.*@dev"
+                "symfony/process": "2.5.*",
+                "webforge/common": ">=1.8"
             },
             "require-dev": {
-                "mockery/mockery": "0.8.*@stable",
+                "mockery/mockery": "dev-master",
                 "satooshi/php-coveralls": "dev-master",
-                "symfony/console": "2.3.*@stable",
-                "symfony/finder": "2.3.*@stable",
+                "symfony/console": "2.4.*@stable",
+                "symfony/finder": "2.4.*@stable",
                 "webforge/testplate": ">=1.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -512,32 +520,44 @@
                     "email": "p.scheit@ps-webforge.com"
                 }
             ],
-            "time": "2013-11-11 19:47:24"
-        }
-    ],
-    "packages-dev": [
+            "time": "2014-05-05T14:48:41+00:00"
+        },
         {
-            "name": "symfony/css-selector",
-            "version": "2.1.x-dev",
-            "target-dir": "Symfony/Component/CssSelector",
+            "name": "webforge/utils",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/CssSelector.git",
-                "reference": "bf7bb82a099dfb26b018daf70ad1985fea4d2997"
+                "url": "https://github.com/webforge-labs/webforge-utils.git",
+                "reference": "140d36d9556f3cb244ee3769cce589eb7eeca941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/bf7bb82a099dfb26b018daf70ad1985fea4d2997",
-                "reference": "bf7bb82a099dfb26b018daf70ad1985fea4d2997",
+                "url": "https://api.github.com/repos/webforge-labs/webforge-utils/zipball/140d36d9556f3cb244ee3769cce589eb7eeca941",
+                "reference": "140d36d9556f3cb244ee3769cce589eb7eeca941",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.2.*@stable",
+                "mockery/mockery": "@stable",
+                "satooshi/php-coveralls": "dev-master",
+                "webforge/collections": "^1.0@dev"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\CssSelector": ""
+                    "Webforge\\Common": [
+                        "src/php/",
+                        "tests/php/"
+                    ]
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -546,17 +566,73 @@
             ],
             "authors": [
                 {
+                    "name": "Philipp Scheit",
+                    "email": "p.scheit@ps-webforge.com"
+                }
+            ],
+            "description": "A basic lib for file system and utils",
+            "homepage": "http://github.com/webforge-labs/webforge-utils",
+            "keywords": [
+                "framework",
+                "system",
+                "util"
+            ],
+            "time": "2015-07-20T16:44:33+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "symfony/css-selector",
+            "version": "2.8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "ba3204654efa779691fac9e948a96b4a7067e4ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/ba3204654efa779691fac9e948a96b4a7067e4ab",
+                "reference": "ba3204654efa779691fac9e948a96b4a7067e4ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony CssSelector Component",
-            "homepage": "http://symfony.com",
-            "time": "2013-05-17 00:31:34"
+            "homepage": "https://symfony.com",
+            "time": "2017-05-01T14:31:55+00:00"
         },
         {
             "name": "webforge/dom",
@@ -564,20 +640,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webforge-labs/webforge-dom.git",
-                "reference": "218b3c078b63310e6251ade7b01ea15dbb057013"
+                "reference": "79bc03e8cb1a483e122e700d15bbb9ac607dd39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webforge-labs/webforge-dom/zipball/218b3c078b63310e6251ade7b01ea15dbb057013",
-                "reference": "218b3c078b63310e6251ade7b01ea15dbb057013",
+                "url": "https://api.github.com/repos/webforge-labs/webforge-dom/zipball/79bc03e8cb1a483e122e700d15bbb9ac607dd39b",
+                "reference": "79bc03e8cb1a483e122e700d15bbb9ac607dd39b",
                 "shasum": ""
             },
             "require": {
-                "symfony/css-selector": "2.1.*@stable",
+                "symfony/css-selector": ">=2.4 <3.0",
                 "webforge/collections": ">=1"
             },
             "require-dev": {
-                "webforge/testplate": "1.3.*@dev"
+                "webforge/testplate": ">=1"
             },
             "type": "library",
             "extra": {
@@ -604,7 +680,7 @@
                 }
             ],
             "description": "A very very very very very simple aproach to build an api like jquery for html (testing) in php",
-            "time": "2013-11-04 08:49:12"
+            "time": "2015-03-13T10:40:29+00:00"
         },
         {
             "name": "webforge/testplate",
@@ -663,7 +739,7 @@
                 }
             ],
             "description": "Testplate for webforge for base testcases",
-            "time": "2014-08-04 08:03:39"
+            "time": "2014-08-04T08:03:39+00:00"
         }
     ],
     "aliases": [],

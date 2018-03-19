@@ -36,6 +36,32 @@ abstract class AbstractFastBillClient extends AbstractClient
     }
 
     /**
+     * @param $invoice Invoice
+     * @return boolean true if delete was successful
+     * @throws BadRequestException If delete was not successful
+     */
+    public function deleteInvoice(Invoice $invoice)
+    {
+        $requestBody = array(
+            'SERVICE' => 'invoice.delete',
+            'DATA' => $invoice->serializeJSONXML()
+        );
+
+        $jsonResponse = $this->validateResponse(
+            $this->dispatchRequest(
+                $this->createRequest('POST', '/', $requestBody)
+            ),
+            function ($response, &$msg) {
+                $msg = 'STATUS is not equal to success';
+
+                return isset($response->STATUS) && $response->STATUS === 'success';
+            }
+        );
+
+        return true;
+    }
+
+    /**
      * @param Invoice $invoice
      * @return Invoice
      */
@@ -352,6 +378,7 @@ abstract class AbstractFastBillClient extends AbstractClient
      * @param \stdClass $jsonResponse
      * @param callable $validateResponse
      * @return the whole response including REQUEST and RESPONSE keys
+     * @throws BadRequestException
      */
     protected function validateResponse(\stdClass $jsonResponse, \Closure $validateResponse)
     {
